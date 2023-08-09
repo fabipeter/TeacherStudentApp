@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
+
+body {
+  background-color: #EAEAEA !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.ui.inverted.top.fixed.menu {
+  background-image: linear-gradient(135deg, rgb(24, 42, 115) 0%, rgb(33, 138, 174) 69%, rgb(32, 167, 172) 89%) !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.react-calendar {
+  width: 100%;
+  border: none;
+  box-shadow: 0 1px 2px 0 rgba(34, 36, 38, .15);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*home page styles*/
+
+.masthead {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  background-image: linear-gradient(
+          135deg,
+          rgb(24, 42, 115) 0%,
+          rgb(33, 138, 174) 69%,
+          rgb(32, 167, 172) 89%
+  ) !important;
+  height: 100vh;
+}
+
+.masthead .ui.menu .ui.button,
+.ui.menu a.ui.inverted.button {
+  margin-left: 0.5em;
+}
+
+.masthead h1.ui.header {
+  font-size: 4em;
+  font-weight: normal;
+}
+
+.masthead h2 {
+  font-size: 1.7em;
+  font-weight: normal;
+}
+
+/*end home page styles*/
+
+.formWrapper{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.detailsform{
+  width: 40%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* navbar styles */
+
+@media screen and (max-width: 800px) {
+  .navbarContainer{
+    justify-content: space-between !important;
   }
-  to {
-    transform: rotate(360deg);
+  .hamButtton{
+    background: transparent;
+    border: unset;
+    
+  }
+  .hamButtton svg{
+    fill: white;
+  }
+}
+
+
+
+/* end of navbar styles */
+
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+
+
+@media screen and (max-width: 800px) {
+  .profileEventMenu{
+    display: block !important;
   }
 }
