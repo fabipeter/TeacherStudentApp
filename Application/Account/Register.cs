@@ -117,7 +117,7 @@ namespace Application.Account
                     var result = await _userManager.CreateAsync(user);
                     if (result.Succeeded)
                     {
-                        await _userManager.AddToRoleAsync(user, Roles.Teacher.ToString());
+                        await _userManager.AddToRoleAsync(user, request.IsTeacher? Roles.Teacher.ToString():Roles.Student.ToString());
                         await _userManager.UpdateAsync(user);
                         return new BaseResponse
                         {
